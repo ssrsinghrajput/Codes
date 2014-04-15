@@ -1,4 +1,4 @@
-//PROBLEM :: http://www.spoj.com/problems/GSS1/
+//PROBLEM :: http://www.spoj.com/problems/GSS3/
 //TAG :: SEGMENT TREE
 #include<bits/stdc++.h>
 using namespace std;
