@@ -1,0 +1,29 @@
+#Implementation of Z Algorithm
+import math
+import fractions
+S = raw_input()
+T = raw_input()
+S = S+'#'
+S = S+T
+L,R,l = 0,0,len(S)
+R = int(R)
+Z = []
+for i in range(l):
+	Z.append(0)
+for i in range(l):
+	if i>R :
+		L,R = i,i
+		while (R < l and S[R-L] == S[R]):
+			R+=1
+		Z[i] = R-L
+		R-=1
+	else :
+		K = i-L
+		if Z[K]< R-i+1 :
+			Z[i] = Z[K]
+		else :
+			L = i
+			while(R<l and S[R-L] == S[R]):
+				R+=1
+			Z[i] = R-L
+			R-=1
